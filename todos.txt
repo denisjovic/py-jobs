@@ -1,0 +1,4 @@
+- landing page je spisak poslova
+    - svaki posao ima ime kompanije, description, url, salary, etc DONE
+- dodavanje poslova preko baze, rucno? dodavanje DONE
+
