@@ -1,5 +1,7 @@
 from flask import Flask, render_template, request, redirect
 from flask_sqlalchemy import SQLAlchemy
+from sqlalchemy import desc
+
 import json, html
 import os
 
@@ -39,8 +41,8 @@ def index():
     # db.session.commit()
 
     jobs = Job.query.all()
-    for j in jobs:
-        print(type(j))
+    jobs = jobs[::-1]
+  
     return render_template('index.html', jobs=jobs)
 
 @app.route('/add', methods=['GET', 'POST'])
@@ -58,6 +60,14 @@ def add():
         db.session.commit()
         return redirect('/')
     return render_template('add.html')
+
+@app.route('/job/<id>', methods=["GET", "POST"])
+def job(id):
+    print("ID IS", id)
+    jobs = Job.query.get(id)
+    print(jobs)
+    return render_template('jobdetails.html', jobs=jobs)
+    
 
 
 if __name__ == '__main__':

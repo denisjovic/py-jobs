@@ -1,0 +1,30 @@
+body {
+    font-family: 'JetBrains Mono', monospace;
+    color: whitesmoke !important;
+}
+
+a, a:hover {
+    text-decoration: none !important;
+    color: whitesmoke;
+}
+
+
+nav {
+    margin-bottom: 15vh;
+}
+
+.flex-wrapper {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: space-between
+  }
+
+.container {
+    min-height: 80%;
+}
+
+
+#footer {
+    margin-top: 20vh !important;
+}

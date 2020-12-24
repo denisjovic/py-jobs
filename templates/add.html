@@ -2,14 +2,14 @@
 
 {% block body %}
 
-<form action="/add" method="POST">
-    <input type="text" name="title" placeholder="Title">
-    <input type="text" name="description" placeholder="Description">
-    <input type="text" name="location" placeholder="Location">
-    <input type="text" name="salary" placeholder="Salary">
-    <input type="text" name="url" placeholder="URL">
-    <input type="text" name="tags" placeholder="Tags">
-    <button type="submit">Add</button>
+<form action="/add" method="POST" class="center-align">
+    <input class="center-align" type="text" name="title" placeholder="Title" required>
+    <input class="center-align" type="text" name="description" placeholder="Description" required>
+    <input class="center-align" type="text" name="location" placeholder="Location" required>
+    <input class="center-align" type="text" name="salary" placeholder="Salary" required>
+    <input class="center-align" type="text" name="url" placeholder="URL" required>
+    <input class="center-align" type="text" name="tags" placeholder="Tags" required>
+    <button class="waves-effect red lighten-1 btn type="submit">Add</button>
 </form>
 
 {% endblock %}
