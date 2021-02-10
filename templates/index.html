@@ -1,18 +1,20 @@
 {% extends 'base.html' %}
 
 {% block body %}
+
 {% if jobs %}
 
-{% for job in jobs %}
-<a href="/job/{{job.id}}">
-<h3 class="center-align">{{ job.title }}</h3>
-<p class="center-align">{{ job.location }}
-    <span class="material-icons">
-        location_on</span>
-</p>
-<p class="center-align"><a href="{{job.url}}">{{ job.url }}</a></p>
-</a>
-{% endfor %}
+    {% for job in jobs %}
+<div id="job-list">
+    <h3 class="center-align">{{ job.title }}</h3>
+    <p class="center-align">{{ job.location }}
+        <span class="material-icons">location_on</span>
+    </p>
+    <p class="center-align"><a href="{{job.url}}">{{ job.url }}</a></p>
+    <p class="center-align"><a href="/job/{{job.id}}">See more...</a></p>
+</div>
+    {% endfor %}
+
 {% endif %}
 
 {% endblock %}

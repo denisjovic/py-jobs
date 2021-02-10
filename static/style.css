@@ -24,7 +24,9 @@ nav {
     min-height: 80%;
 }
 
-
+#job-list {
+    border: 1px solid whitesmoke;
+}
 #footer {
     margin-top: 20vh !important;
 }
